@@ -1,2 +1,1 @@
-# castlequest
-CastleQuest - The Search for Sparty
+# Castlequest - The Search for Sparty
