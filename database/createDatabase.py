@@ -2,7 +2,7 @@ import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
 superuser = 'postgres'
-superpass = 'CHANGE ME'
+superpass = 'goober'
 
 con = None
 
@@ -68,21 +68,9 @@ def createRoles():
         NOSUPERUSER
         INHERIT
         NOCREATEDB
-        NOCREATEROLE
+        CREATEROLE
         NOREPLICATION
         PASSWORD 'Woodruff1787'
-    ''')
-    print("\t\tCreating castlequest")
-    con.cursor().execute('''
-        DROP ROLE IF EXISTS castlequest;
-        CREATE ROLE castlequest WITH
-        LOGIN
-        NOSUPERUSER
-        INHERIT
-        NOCREATEDB
-        NOCREATEROLE
-        NOREPLICATION
-        PASSWORD 'HudenBurger23'
     ''')
 
 def createDatabase():
