@@ -2,7 +2,7 @@ import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
 superuser = 'postgres'
-superpass = 'goober'
+superpass = 'swordfish'
 
 con = None
 

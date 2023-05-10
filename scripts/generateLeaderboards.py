@@ -3,8 +3,14 @@ import psycopg2
 con = psycopg2.connect(
     host='localhost',
     database='castlequest',
-    user='castlequest',
-    password='HudenBurger23')
+    user='postgres',
+    password='swordfish'
+)
 
-#Hey I have no idea how you made your leaderboards!
-#But update them using SQL!
+cur = con.cursor()
+
+cur.execute ('''REFRESH MATERIALIZED VIEW player_leaderboard;''')
+
+cur.execute ('''REFRESH MATERIALIZED VIEW guild_leaderboard;''')
+
+
